@@ -59,21 +59,4 @@ using UnityEngine;
         }
 
         }
-
-        private void FixedUpdate()
-        {
-
-            if (Input.GetButton(vertical) || Input.GetButton(horizontal) )
-            {
-                anim.SetBool(isMove, true);
-            
-            }
-            else
-            {
-            anim.SetBool(isMove, false);
-            audio.Play();
-
-        }
-            isRunning = Input.GetButton(run);
-        }
     }
