@@ -1,16 +1,17 @@
-
 using UnityEngine;
 [RequireComponent(typeof(Animation))]
 public class IKEAControl : MonoBehaviour
 {
     [SerializeField]
     private bool _ikActive;
+    
     [SerializeField]
     private Transform _pointLeftHand;
+    
     [SerializeField]
     private Transform _pointLook;
 
-    [SerializeField] private float _lookRadius=2;
+    [SerializeField] private float _radiusLooking=2;
     private Animator _animator;
     
     private void Awake()
@@ -27,9 +28,7 @@ public class IKEAControl : MonoBehaviour
             {
 
                 Vector3 distanceForLookPoint = _pointLook.position - transform.position;
-                if (distanceForLookPoint.x <= _lookRadius && distanceForLookPoint.x >= -_lookRadius &&
-                    distanceForLookPoint.y <= _lookRadius && distanceForLookPoint.y >= -_lookRadius &&
-                    distanceForLookPoint.z <= _lookRadius && distanceForLookPoint.z >= -_lookRadius)
+                if (distanceForLookPoint.magnitude <= _radiusLooking)
                 {
                     _animator.SetLookAtWeight(1);
                     _animator.SetLookAtPosition(_pointLook.position);
