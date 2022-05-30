@@ -2847,11 +2847,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: d96ac22c128962b48a8739c61ddaeb35, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_TreeDistance: 2500
+  m_TreeBillboardDistance: 301
+  m_TreeCrossFadeLength: 11
+  m_TreeMaximumFullLODCount: 235
+  m_DetailObjectDistance: 110
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -3567,11 +3567,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7933203df460041addd53804a786a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ikActive: 1
-  _pointLeftHand: {fileID: 2146502488}
-  _pointLook: {fileID: 1299069116}
-  _lookRadius: 2
-  _animator: {fileID: 0}
 --- !u!111 &1977274253
 Animation:
   m_ObjectHideFlags: 0
